@@ -1,0 +1,17 @@
+module HelloApp
+{
+  interface Hello
+  {
+	string sayHello();
+	void  register(in string name,in long x,in long y);
+	float renew (in float d , in long c);
+	
+	float bmi(in long c,in float i);
+	float upgrade (in float d,in long i);
+	long search(in string s);
+
+	
+    	oneway void shutdown();
+
+  };
+};
