@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+       #register,#renew,#bmi,#upgrade
+       {
+        display: none;
+       }
+       </style>
+        <style>
+        #red
+        {
+            color:red;
+            size:40px;
+        }
+        h1
+        {
+            font-size: 50px;
+        }
+        </style>
+        
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="red"> <h1>Talwarkar's<br><br><br></h1></div>
+        <input type="button" onclick="register()" value="register now">
+            <input type="button" onclick="renew()" value="renew your plan">
+            <input type="submit" onclick="upgrade()" value="upgrade your plan" />
+                <input type="button" onclick="bmi()" value="calculate your bmi">
+                
+            <div id="register" >
+                <form method="GET" action="GymingServletService">
+                    <fieldset>
+                        <legend>Register form</legend>
+                         <input type="hidden" name="type" value="register"> 
+                        name:<input type="text" name="name1" value="" /><br><br><br><br>
+                    age:<input type="text" name="age" value="" /><br><br><br><br>
+                    weight:<input type="text" name="weight" value="" /><br><br><br><br>
+                    <input type="submit" value="submit" /><br><br><br><br>
+                    <fieldset>
+                </form>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+        <div id="upgrade" > upgrade plan
+                 <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 year</td>
+                            <td>6 months</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2000</td>
+                        </tr>
+                    </tbody>
+                </table><br><br><br><br><br><br><br><br><br>
+                <form method="GET" action="GymingServletService">
+                                        <fieldset>
+                               <legend>Upgrade your plan:</legend><br><br><br><br>
+                                <input type="hidden" name="type" value="upgrade"> 
+                    name:<input type="text" name="name4" value="" /><br><br><br><br>
+                    duration:<input type="text" name="plan4" value="" /><br><br><br><br>
+                                 <input type="submit" value="submit" /><br><br><br><br>
+                                                     </fieldset><br><br><br><br><br>
+                </form>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+            <div id="renew">Renew Membership
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 year</td>
+                            <td>6 months</td>
+                        </tr>
+                        <tr>
+                            <td>5000</td>
+                            <td>3000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form method="GET" action="GymingServletService">
+                                        <fieldset><br><br><br><br>
+                      <legend>Renew Your plan</legend><br><br><br><br>
+                       <input type="hidden" name="type" value="renew"> 
+                    name:<input type="text" name="name2" value="" /><br><br><br><br>
+                    duration:<input type="text" name="plan" value="" /><br><br><br><br>
+                                 <input type="submit" value="submit" /><br><br><br><br>
+                                   </fieldset><br>
+                </form>
+                
+            
+            
+            
+            
+            
+            
+             
+            
+          </div>
+        <div id="bmi">
+            <form action="GymingServletService">
+                              <fieldset>
+                                   <legend>BMI calculator</legend><br><br><br><br>
+                                    <input type="hidden" name="type" value="bmi"> 
+            enter weight in kilograms:<input type="text" name="w" value="" /><br><br><br><br>
+            enter height in metres:<input type="text" name="h" value="" /><br><br><br><br>
+            m=(ft/3.208)
+            <input type="submit" value="submit" /><br><br><br><br>
+                                </fieldset><br>
+              </form>
+        </div>
+            
+                <script>
+                function register() {
+                 document.getElementById("register").style.display = "block";
+                 document.getElementById("upgrade").style.display = "none";
+                 document.getElementById("renew").style.display = "none";
+                    document.getElementById("bmi").style.display = "none";
+                }
+                   function upgrade() {
+                 document.getElementById("upgrade").style.display = "block";
+                  document.getElementById("renew").style.display = "none";
+                   document.getElementById("register").style.display = "none";
+                    document.getElementById("bmi").style.display = "none";
+                }
+                function renew() {
+                    document.getElementById("renew").style.display = "block";
+                       document.getElementById("bmi").style.display = "none";
+                        document.getElementById("register").style.display = "none";
+                          document.getElementById("upgrade").style.display = "none";
+                    }
+                    function bmi() {
+                    document.getElementById("bmi").style.display = "block";
+                    document.getElementById("register").style.display = "none";
+                          document.getElementById("upgrade").style.display = "none";
+                          document.getElementById("renew").style.display = "none";
+                    }
+</script>
+<div id="demo"></div>
+    </body>
+</html>
